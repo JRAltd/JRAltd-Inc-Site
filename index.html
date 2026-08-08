@@ -1,13 +1,167 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>JRAltd Inc.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <h1>Welcome to JRAltd Inc.</h1>
-    <p>Our official website is coming soon.</p>
-  </body>
-  </html>
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JRAltd Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --bg-alt: #10151f;
+      --cyan: #2fd8ef;
+      --text: #e6f1f5;
+      --muted: #9db0bb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header img {
+      width: 100%;
+      display: block;
+    }
+    nav {
+      background: var(--bg-alt);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid rgba(47,216,239,0.3);
+      z-index: 10;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover { color: var(--cyan); }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    h2 {
+      color: var(--cyan);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid rgba(47,216,239,0.3);
+      padding-bottom: 0.5rem;
+    }
+    .intro p { font-size: 1.1rem; line-height: 1.7; color: var(--muted); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--bg-alt);
+      border: 1px solid rgba(47,216,239,0.2);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+    }
+    .card h3 { margin-top: 0; color: var(--text); }
+    .card p { color: var(--muted); line-height: 1.6; }
+    .card a.btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--cyan);
+      color: #06131a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .tools-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .tools-list li {
+      background: var(--bg-alt);
+      border: 1px solid rgba(47,216,239,0.3);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: var(--cyan);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-alt);
+      color: var(--muted);
+      border-top: 1px solid rgba(47,216,239,0.2);
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="header.png" alt="JRAltd_Inc - Digital Content Creator and 3D Print Design">
+  </header>
+  <nav>
+    <a href="#apps">Android Apps</a>
+    <a href="#printing">3D Printing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="intro">
+    <h2>Welcome</h2>
+    <p>I'm Jeremy Allen, the person behind JRAltd Inc. I build Android apps and design functional parts for 3D printing. This site is a home base for the things I create, from mobile apps to printable designs.</p>
+  </section>
+
+  <section id="apps">
+    <h2>Android Apps</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Flip Note</h3>
+        <p>A digital notebook app built to feel like real paper. Choose ruled, grid, or dotted pages, customize your cover colors, and write with a variety of fonts, all with a clean dark mode interface.</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.flipnote" target="_blank" rel="noopener">Get it on Google Play</a>
+      </div>
+      <div class="card">
+        <h3>My Wallpapers</h3>
+        <p>An art and design app sharing original wallpaper creations for mobile and desktop, made to show that anyone can create something beautiful with the right mindset.</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.jraltdinc.mywallpapers" target="_blank" rel="noopener">Get it on Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="printing">
+    <h2>3D Printing</h2>
+    <p>Based in Iowa, I design and print practical, everyday objects, from replacement parts to original creations, sharing free models with the maker community on Thingiverse.</p>
+    <ul class="tools-list">
+      <li>Adventurer 5M</li>
+      <li>Kobra</li>
+      <li>Tinkercad</li>
+      <li>Fusion 360</li>
+    </ul>
+    <p style="margin-top:1.5rem;">
+      <a class="btn" href="https://www.thingiverse.com/JRAltdinc/designs" target="_blank" rel="noopener">View my designs on Thingiverse</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Have a question or want to collaborate? Reach out anytime.</p>
+    <p><a href="mailto:j.allen@jraltdinc.us" style="color:#2fd8ef; font-size:1.2rem;">j.allen@jraltdinc.us</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 JRAltd Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
