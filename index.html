@@ -73,6 +73,15 @@
     }
     .card h3 { margin-top: 0; color: var(--text); }
     .card p { color: var(--muted); line-height: 1.6; }
+    /* App screenshot inside a card. Deliberately not reusing .gallery img, whose
+       fixed 4:3 aspect-ratio + object-fit:cover would crop a wide app window. */
+    .app-shot {
+      width: 100%;
+      display: block;
+      margin-top: 1.25rem;
+      border: 1px solid rgba(47,216,239,0.2);
+      border-radius: 8px;
+    }
     .card a.btn,
     a.btn {
       display: inline-block;
@@ -178,6 +187,7 @@
       <div class="card">
         <h3>JRAltd Inc Program Updater</h3>
         <p>A WinGet-powered desktop app for Windows that checks for and applies software updates across your machine from one clean, dark-mode interface, no more chasing down individual updaters one at a time.</p>
+        <img class="app-shot" src="images/program-updater.png" alt="JRAltd Inc Program Updater main window: a dark interface with an Updates list, Updates and Blocked tabs, an auto-check interval selector, and Check for Updates, Update Selected, and Update All buttons">
         <ul class="tools-list">
           <li>Update everything at once</li>
           <li>Skip packages you don't want</li>
