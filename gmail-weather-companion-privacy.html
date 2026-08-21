@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy — Gmail Weather Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --bg-alt: #10151f;
+      --cyan: #2fd8ef;
+      --text: #e6f1f5;
+      --muted: #9db0bb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    h1 {
+      color: var(--cyan);
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    h2 {
+      color: var(--cyan);
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      border-bottom: 2px solid rgba(47,216,239,0.3);
+      padding-bottom: 0.4rem;
+    }
+    p, li { color: var(--muted); line-height: 1.7; }
+    ul { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+    code {
+      background: var(--bg-alt);
+      color: var(--text);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .contact {
+      margin-top: 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-alt);
+      border: 1px solid rgba(47,216,239,0.2);
+      border-radius: 10px;
+    }
+    .contact a { color: var(--cyan); text-decoration: none; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-alt);
+      color: var(--muted);
+      border-top: 1px solid rgba(47,216,239,0.2);
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Privacy Policy — Gmail Weather Companion</h1>
+    <p class="updated">Last updated: August 21, 2026</p>
+
+    <p>Gmail Weather Companion is a weather tool that runs inside Gmail, available as a Chrome extension and as a Google Workspace Gmail Add-on. Both versions share the same data practices described below. It shows live weather, a short forecast, and a plain-language weather summary for a location you choose — it does not read, scan, or store your email content.</p>
+
+    <h2>What Data We Access</h2>
+    <ul>
+      <li><strong>Searched or saved location:</strong> The city or zip code you search, or a saved favorite location, is used to request weather data.</li>
+      <li><strong>No email content:</strong> Neither version reads, scans, or stores the subject or body of any email. The Chrome extension has no permission to access email content at all; the Gmail Add-on version requests only the minimum add-on-execution scope needed to display its panel inside Gmail.</li>
+      <li><strong>No account credentials:</strong> We never access, store, or transmit your Google account password or authentication tokens beyond what Google's own add-on/extension platform requires to run the tool.</li>
+    </ul>
+
+    <h2>How Data Is Used</h2>
+    <ul>
+      <li>Your selected location is sent to <a href="https://open-meteo.com" target="_blank" rel="noopener" style="color:var(--cyan);">Open-Meteo</a> (weather and geocoding) to fetch current conditions and a forecast.</li>
+      <li>The Chrome extension version also loads radar map tiles from RainViewer and CartoDB for the interactive radar display.</li>
+      <li>No email content, sender/recipient information, or other personal data is ever included in these requests.</li>
+    </ul>
+
+    <h2>Data Storage</h2>
+    <ul>
+      <li><strong>Chrome extension:</strong> Your saved location and temperature unit are stored locally in your browser via <code>chrome.storage.sync</code>.</li>
+      <li><strong>Gmail Add-on:</strong> Your saved favorite location and temperature unit are stored via Google Apps Script's <code>PropertiesService</code>, scoped to your account and this add-on only.</li>
+      <li>We do not operate a backend server or database that stores your data outside of these platform-provided, per-user storage mechanisms.</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p>We do not sell, rent, or share your data with third parties. The only external requests are to the weather/map data providers listed above, containing only the location you selected.</p>
+
+    <h2>Your Choices</h2>
+    <p>You can uninstall the Chrome extension at any time from your browser's extension manager, or remove the Gmail Add-on from Gmail's Settings → Add-ons page (or by revoking its access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" style="color:var(--cyan);">myaccount.google.com/permissions</a>). Either action stops all data access immediately.</p>
+
+    <div class="contact">
+      <strong>Contact:</strong> Questions about this privacy policy or how Gmail Weather Companion handles data can be sent to
+      <a href="mailto:j.allen@jraltdinc.us">j.allen@jraltdinc.us</a>.
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 JRAltd Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
