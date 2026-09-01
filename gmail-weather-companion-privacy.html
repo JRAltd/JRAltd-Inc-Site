@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy — Gmail Weather Companion &amp; Addon</title>
+  <title>Privacy Policy — Gmail Weather Companion &amp; JRAltd Weather for Gmail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
@@ -67,10 +67,10 @@
 </head>
 <body>
   <section>
-    <h1>Privacy Policy — Gmail Weather Companion &amp; Gmail Weather Addon</h1>
-    <p class="updated">Last updated: August 21, 2026</p>
+    <h1>Privacy Policy — Gmail Weather Companion &amp; JRAltd Weather for Gmail</h1>
+    <p class="updated">Last updated: September 1, 2026</p>
 
-    <p>This privacy policy covers two related tools that show weather inside Gmail: <strong>Gmail Weather Companion</strong> (a Chrome extension) and <strong>Gmail Weather Addon</strong> (a Google Workspace Gmail Add-on). Both share the same data practices described below. Each shows live weather, a short forecast, and a plain-language weather summary for a location you choose — neither reads, scans, or stores your email content.</p>
+    <p>This privacy policy covers two related tools that show weather inside Gmail: <strong>Gmail Weather Companion</strong> (a Chrome extension) and <strong>JRAltd Weather for Gmail</strong> (a Google Workspace Gmail Add-on). Both share the same data practices described below. Each shows live weather, a short forecast, and a plain-language weather summary for a location you choose — neither reads, scans, or stores your email content.</p>
 
     <h2>What Data We Access</h2>
     <ul>
@@ -93,6 +93,18 @@
       <li>We do not operate a backend server or database that stores your data outside of these platform-provided, per-user storage mechanisms.</li>
     </ul>
 
+    <h2>Data Protection and Security</h2>
+    <p>Because neither tool reads email content, contacts, or account credentials, no sensitive user data is collected in the first place. The small amount of data that does exist — your chosen location and your °F/°C preference — is protected as follows:</p>
+    <ul>
+      <li><strong>Encryption in transit:</strong> Every network request either tool makes uses HTTPS with TLS. No data is ever sent over an unencrypted connection.</li>
+      <li><strong>Encryption at rest:</strong> Preferences are stored only through Google's own platform storage — <code>chrome.storage.sync</code> for the Chrome extension and Apps Script's <code>PropertiesService</code> for the Gmail Add-on. Both are encrypted at rest by Google on Google-managed infrastructure.</li>
+      <li><strong>Access control:</strong> Both storage mechanisms are scoped to your Google account and to that single tool. The developer has no console, dashboard, credential, or API that can read them. There is no developer-operated server, database, log store, or backup that holds your data, so there is nothing on our side to breach.</li>
+      <li><strong>Least-privilege access:</strong> Each tool requests only the minimum permissions it needs to draw its own panel and call the public weather API. The Gmail Add-on does not request any scope that grants access to message content, and the Chrome extension has no permission to read email at all. Access is granted through Google's standard OAuth/extension consent flow and can be revoked by you at any time.</li>
+      <li><strong>Data minimization:</strong> No account identifiers, email addresses, IP-based profiles, device fingerprints, or usage analytics are collected. Requests to the weather providers contain a location only, with nothing that identifies you.</li>
+      <li><strong>Retention and deletion:</strong> Your preferences persist only while the tool is installed. Uninstalling the Chrome extension, or removing the Gmail Add-on and revoking its access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" style="color:var(--cyan);">myaccount.google.com/permissions</a>, deletes the stored values through Google's platform. You can also clear a saved favorite from inside the tool itself at any time.</li>
+      <li><strong>Incident handling:</strong> Since no user data is held by the developer, a compromise of the developer's systems could not expose it. If a security issue is ever found in either tool, a corrected version will be published through the Chrome Web Store or Google Workspace Marketplace and users will be notified at the contact address below.</li>
+    </ul>
+
     <h2>Data Sharing</h2>
     <p>We do not sell, rent, or share your data with third parties. The only external requests are to the weather/map data providers listed above, containing only the location you selected.</p>
 
@@ -100,7 +112,7 @@
     <p>You can uninstall the Chrome extension at any time from your browser's extension manager, or remove the Gmail Add-on from Gmail's Settings → Add-ons page (or by revoking its access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" style="color:var(--cyan);">myaccount.google.com/permissions</a>). Either action stops all data access immediately.</p>
 
     <div class="contact">
-      <strong>Contact:</strong> Questions about this privacy policy or how Gmail Weather Companion or Gmail Weather Addon handle data can be sent to
+      <strong>Contact:</strong> Questions about this privacy policy or how Gmail Weather Companion or JRAltd Weather for Gmail handle data can be sent to
       <a href="mailto:j.allen@jraltdinc.us">j.allen@jraltdinc.us</a>.
     </div>
   </section>
