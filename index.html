@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <title>JRAltd Inc.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="JRAltd Inc. — Official website of Jeremy Allen. Android apps (Flip Note, My Wallpapers), Windows tools, and 3D print designs.">
+  <meta name="description" content="JRAltd Inc. — Official website of Jeremy Allen. Android apps (Flip Note), Microsoft Outlook add-ins (Email Sticky Notes), Windows tools, and 3D print designs.">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="JRAltd Inc. — Digital Content, Apps &amp; 3D Print Design">
+  <meta property="og:description" content="Official website of Jeremy Allen. Android apps, Microsoft Outlook &amp; Gmail productivity add-ins, Windows tools, and functional 3D prints.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jraltdinc.us/">
+  <meta property="og:image" content="https://jraltdinc.us/header.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://jraltdinc.us/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,7 +42,8 @@
       background: var(--bg-alt);
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
       padding: 1rem;
       position: sticky;
       top: 0;
@@ -101,6 +109,51 @@
       text-decoration: none;
       border-radius: 6px;
     }
+    .card a.btn-secondary,
+    a.btn-secondary {
+      background: rgba(47,216,239,0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(47,216,239,0.35);
+    }
+    .card a.btn-secondary:hover,
+    a.btn-secondary:hover {
+      background: rgba(47,216,239,0.22);
+      transform: translateY(-2px);
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+    .install-box {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      background: rgba(10, 14, 23, 0.75);
+      border: 1px solid rgba(47, 216, 239, 0.25);
+      border-radius: 8px;
+    }
+    .install-box h4 {
+      margin: 0 0 0.75rem 0;
+      color: var(--cyan);
+      font-size: 1.05rem;
+    }
+    .install-box ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+    }
+    .install-box li {
+      margin-bottom: 0.6rem;
+      line-height: 1.55;
+    }
+    .install-box code {
+      background: rgba(47, 216, 239, 0.15);
+      color: var(--cyan);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
     .tools-list {
       list-style: none;
       padding: 0;
@@ -162,6 +215,7 @@
   </header>
   <nav>
     <a href="#apps">Android Apps</a>
+    <a href="#outlook-tools">Outlook Add-in</a>
     <a href="#gmail-tools">Gmail Tools</a>
     <a href="#tools">Windows Tools</a>
     <a href="#printing">3D Printing</a>
@@ -171,7 +225,7 @@
 
   <section class="intro">
     <h2>Welcome</h2>
-    <p>I'm Jeremy Allen, the person behind JRAltd Inc. I build Android apps and design functional parts for 3D printing. This site is a home base for the things I create, from mobile apps to printable designs.</p>
+    <p>I'm Jeremy Allen, the person behind JRAltd Inc. I build Android apps, Microsoft Outlook and Gmail productivity tools, Windows desktop utilities, and functional 3D printable designs. This site is a home base for everything I create.</p>
   </section>
 
   <section id="apps">
@@ -181,12 +235,58 @@
         <h3>Flip Note</h3>
         <p>A digital notebook app built to feel like real paper. Choose ruled, grid, or dotted pages, customize your cover colors, and write with a variety of fonts, all with a clean dark mode interface.</p>
         <a class="btn" href="https://play.google.com/store/apps/details?id=com.flipnote" target="_blank" rel="noopener">Get it on Google Play</a>
-        <a class="btn" href="flipnote-privacy.html" style="margin-left:0.5rem;">Privacy Policy</a>
+        <a class="btn btn-secondary" href="flipnote-privacy.html" style="margin-left:0.5rem;">Privacy Policy</a>
       </div>
+    </div>
+  </section>
+
+  <section id="outlook-tools">
+    <h2>Outlook Add-in</h2>
+    <div class="cards">
       <div class="card">
-        <h3>My Wallpapers</h3>
-        <p>An art and design app sharing original wallpaper creations for mobile and desktop, made to show that anyone can create something beautiful with the right mindset.</p>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.jraltdinc.mywallpapers" target="_blank" rel="noopener">Get it on Google Play</a>
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+          <img src="images/sticky-notes-icon.png" alt="Email Sticky Notes Logo" style="width:42px; height:42px; border-radius:8px;">
+          <div>
+            <h3 style="margin:0;">Email Sticky Notes</h3>
+            <span style="font-size:0.8rem; color:var(--cyan); font-weight:600;">Microsoft Outlook Mail Add-in</span>
+          </div>
+        </div>
+        <p>A 100% free, self-contained Microsoft Outlook add-in to attach private, color-coded, timestamped sticky notes, interactive action checklists, priority badges, and reminders directly to any email or conversation thread. Pin the taskpane open to easily review and manage notes as you triage your inbox &mdash; all stored privately in your mailbox with zero tracking.</p>
+        <img class="app-shot" src="images/sticky-notes-dark.png" alt="Email Sticky Notes for Outlook interface showing pinned notes, action checklists, color tags, and search in dark mode">
+        <ul class="tools-list">
+          <li>6 color themes &amp; 4 priority badges</li>
+          <li>Interactive action checklists</li>
+          <li>Pinnable taskpane (stays open across emails)</li>
+          <li>Global cross-email search &amp; tags</li>
+          <li>100% private (Exchange mailbox storage)</li>
+          <li>Dark mode &amp; JSON/Markdown backup</li>
+        </ul>
+
+        <div class="install-box">
+          <h4>How to Install in 30 Seconds:</h4>
+          <ol>
+            <li>
+              <strong>Download the Manifest:</strong> Save the <code>email-sticky-notes-manifest.xml</code> configuration file using the download button below.
+            </li>
+            <li>
+              <strong>Open Outlook Add-in Installer:</strong> Go to <a href="https://aka.ms/olksideload" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;">aka.ms/olksideload</a> in your browser (or in Outlook Web / New Outlook for Windows, click <strong>Apps &rarr; Add apps &rarr; Manage your apps</strong>).
+            </li>
+            <li>
+              <strong>Upload the File:</strong> Under <strong>Custom add-ins</strong>, click <strong>Add a custom add-in &rarr; Add from file...</strong> and select the downloaded <code>email-sticky-notes-manifest.xml</code> file.
+            </li>
+            <li>
+              <strong>Pin &amp; Use:</strong> Open any email, click <strong>Email Notes</strong> in the ribbon or action bar, and click the <strong>Pin</strong> icon in the top right so your notes remain visible as you switch emails!
+            </li>
+          </ol>
+        </div>
+
+        <div class="btn-group">
+          <a class="btn" href="email-sticky-notes-manifest.xml" download="email-sticky-notes-manifest.xml">Download Manifest (XML)</a>
+          <a class="btn" href="https://aka.ms/olksideload" target="_blank" rel="noopener">Open Outlook Installer</a>
+          <a class="btn btn-secondary" href="email-sticky-notes.html">Full Guide &amp; Docs</a>
+          <a class="btn btn-secondary" href="https://notes.jraltdinc.us/taskpane.html" target="_blank" rel="noopener">Live Web Preview</a>
+          <a class="btn btn-secondary" href="https://github.com/JRAltd/sticky-note-for-outlook" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
   </section>

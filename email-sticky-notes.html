@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Sticky Notes for Outlook — JRAltd Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Email Sticky Notes for Microsoft Outlook — 100% free, private, self-contained sticky notes, action checklists, and reminders directly attached to your emails.">
+  <link rel="canonical" href="https://jraltdinc.us/email-sticky-notes.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Email Sticky Notes for Microsoft Outlook">
+  <meta property="og:description" content="Free, private, color-coded sticky notes and action checklists directly in Outlook. Zero tracking, stores directly in your Exchange mailbox.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jraltdinc.us/email-sticky-notes.html">
+  <meta property="og:image" content="https://jraltdinc.us/images/sticky-notes-dark.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --bg-alt: #10151f;
+      --cyan: #2fd8ef;
+      --text: #e6f1f5;
+      --muted: #9db0bb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    section {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(47,216,239,0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(47,216,239,0.35);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      color: var(--cyan);
+      font-size: 2.2rem;
+      margin: 0 0 0.5rem;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .app-shot {
+      width: 100%;
+      display: block;
+      margin: 2rem 0;
+      border: 1px solid rgba(47,216,239,0.25);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h2 {
+      color: var(--cyan);
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      border-bottom: 2px solid rgba(47,216,239,0.3);
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: var(--text);
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+    }
+    p, li {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    ul, ol {
+      padding-left: 1.4rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    code {
+      background: rgba(47, 216, 239, 0.15);
+      color: var(--cyan);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .install-box {
+      margin-top: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-alt);
+      border: 1px solid rgba(47, 216, 239, 0.25);
+      border-radius: 10px;
+    }
+    .install-box ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    .install-box li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 0.65rem 1.3rem;
+      background: var(--cyan);
+      color: #06131a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: transform 0.15s;
+    }
+    a.btn:hover {
+      transform: translateY(-2px);
+    }
+    a.btn-secondary {
+      background: rgba(47,216,239,0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(47,216,239,0.35);
+    }
+    a.btn-secondary:hover {
+      background: rgba(47,216,239,0.22);
+    }
+    .privacy-callout {
+      background: rgba(47, 216, 239, 0.08);
+      border-left: 4px solid var(--cyan);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+    .privacy-callout p {
+      margin: 0;
+      color: var(--text);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-alt);
+      color: var(--muted);
+      border-top: 1px solid rgba(47,216,239,0.2);
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <section>
+    <span class="header-badge">Free Microsoft Outlook Add-in</span>
+    <h1>Email Sticky Notes for Outlook</h1>
+    <p class="tagline">Attach private, color-coded, timestamped sticky notes, interactive action checklists, priority badges, and reminders directly to your emails &mdash; without leaving Outlook.</p>
+
+    <div class="btn-group" style="margin-bottom: 2rem;">
+      <a class="btn" href="email-sticky-notes-manifest.xml" download="email-sticky-notes-manifest.xml">Download Manifest (XML)</a>
+      <a class="btn btn-secondary" href="https://aka.ms/olksideload" target="_blank" rel="noopener">Open Outlook Installer</a>
+      <a class="btn btn-secondary" href="https://notes.jraltdinc.us/taskpane.html" target="_blank" rel="noopener">Interactive Web Preview</a>
+      <a class="btn btn-secondary" href="https://github.com/JRAltd/sticky-note-for-outlook" target="_blank" rel="noopener">GitHub Repository</a>
+    </div>
+
+    <img class="app-shot" src="images/sticky-notes-dark.png" alt="Email Sticky Notes for Outlook dark mode interface showing notes, checklists, priority tags, and email triage">
+
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Dual Storage Architecture:</strong> Works instantly out-of-the-box using native Office.js Exchange <code>CustomProperties</code> and <code>RoamingSettings</code>. Optional Microsoft Graph Open Extension sync is available for advanced cloud scenarios.</li>
+      <li><strong>Pinnable Taskpane:</strong> Pin the sticky notes panel open. As you click through your Inbox messages, notes instantly switch to display annotations for the active email.</li>
+      <li><strong>Rich Formatting &amp; Action Checklists:</strong> Add formatted note text, interactive to-do checkboxes that track completion progress, and quick priority indicators.</li>
+      <li><strong>6 Color Themes &amp; 4 Priority Levels:</strong> Visually categorize notes by urgency (Low, Normal, High, Urgent) and color (Yellow, Cyan, Emerald, Lavender, Coral, Amber).</li>
+      <li><strong>Global Cross-Email Search:</strong> Find any note, tag, or checklist item across your entire mailbox in seconds. Filter by color, priority, or custom <code>#tags</code>.</li>
+      <li><strong>Inbox Category Tagging:</strong> Automatically marks annotated emails in your Outlook message list with a custom category badge so you can spot notes at a glance.</li>
+      <li><strong>Native Dark Mode:</strong> Seamlessly detects your Outlook theme preference or toggles manually.</li>
+      <li><strong>Data Portability:</strong> 1-click export to structured JSON or readable Markdown files, with full restore/import support.</li>
+    </ul>
+
+    <div class="privacy-callout">
+      <p><strong>100% Private by Design:</strong> Email Sticky Notes does not send your notes or email contents to any third-party analytics, tracking, or cloud servers. All note data is stored exclusively in your own Microsoft Exchange mailbox.</p>
+    </div>
+
+    <h2>How to Install in 30 Seconds</h2>
+    <div class="install-box">
+      <ol>
+        <li>
+          <strong>Download the Add-in Manifest:</strong>
+          <br>Click <a href="email-sticky-notes-manifest.xml" download="email-sticky-notes-manifest.xml" style="color:var(--cyan); font-weight:600;">Download Manifest (XML)</a> to save <code>email-sticky-notes-manifest.xml</code> to your computer.
+        </li>
+        <li>
+          <strong>Open the Outlook Add-in Installer:</strong>
+          <br>Click <a href="https://aka.ms/olksideload" target="_blank" rel="noopener" style="color:var(--cyan); font-weight:600;">aka.ms/olksideload</a> to go directly to your Outlook Add-in Management page.
+          <br><em style="font-size:0.9rem;">Alternatively, in Outlook on the Web or the New Outlook for Windows, click the <strong>Apps</strong> icon on the left rail &rarr; <strong>Add apps</strong> &rarr; <strong>Manage your apps</strong>.</em>
+        </li>
+        <li>
+          <strong>Upload the Manifest:</strong>
+          <br>Select the <strong>My add-ins</strong> (or <strong>Custom add-ins</strong>) tab, click <strong>Add a custom add-in &rarr; Add from file...</strong>, and select the downloaded <code>email-sticky-notes-manifest.xml</code> file. Click <strong>Install</strong> when prompted.
+        </li>
+        <li>
+          <strong>Pin &amp; Start Taking Notes:</strong>
+          <br>Open any email message in your Inbox. Click <strong>Email Notes</strong> in the ribbon or action bar, then click the <strong>Pin (&uarr;)</strong> icon in the top-right corner of the pane so notes remain open as you browse your emails.
+        </li>
+      </ol>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <h3>Does this require an Azure AD App Registration or Administrator Consent?</h3>
+    <p>No! The add-in runs immediately in any personal or business mailbox using built-in Office.js mailbox storage. It requires zero cloud setup or admin consent.</p>
+
+    <h3>Which versions of Outlook are supported?</h3>
+    <p>Email Sticky Notes supports Outlook on the Web (all modern browsers), the New Outlook for Windows, and Classic Outlook for Windows (Microsoft 365 / Office 2016+).</p>
+
+    <h3>Where can I view the source code or file an issue?</h3>
+    <p>The project is fully open source. You can view the repository, contribute, or submit feedback on <a href="https://github.com/JRAltd/sticky-note-for-outlook" target="_blank" rel="noopener" style="color:var(--cyan);">GitHub</a>.</p>
+
+    <div style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a class="btn" href="/">&larr; Back to JRAltd Inc.</a>
+      <a class="btn btn-secondary" href="https://notes.jraltdinc.us/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+      <a class="btn btn-secondary" href="https://notes.jraltdinc.us/terms.html" target="_blank" rel="noopener">Terms of Service</a>
+      <a class="btn btn-secondary" href="https://notes.jraltdinc.us/support.html" target="_blank" rel="noopener">Support</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 JRAltd Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
