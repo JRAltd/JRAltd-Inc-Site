@@ -9,7 +9,7 @@ The site showcases:
 - **Microsoft Outlook Add-in**: Email Sticky Notes (with 30-second sideloading walkthrough and manifest)
 - **Gmail Tools**: JRAltd Weather for Gmail (Google Workspace Add-on) and Gmail Weather Companion (Chrome Extension)
 - **Windows Tools**: JRAltd Inc Program Updater (WinGet-powered desktop updater)
-- **3D Printing**: Maker portfolio and designs on Cults3D
+- **3D Printing**: Maker portfolio and designs on MakerWorld, Thangs, Tinkercad, and Cults3D
 - **AI Music**: Streaming links on Suno and YouTube Music
 
 ## Key Pages
