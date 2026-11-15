@@ -199,6 +199,20 @@
       color: var(--muted);
       font-size: 0.9rem;
     }
+    .print-thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+    .print-thumbs img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid rgba(47,216,239,0.2);
+      display: block;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -336,7 +350,7 @@
 
   <section id="printing">
     <h2>3D Printing</h2>
-    <p>Based in Iowa, I design and print practical, everyday objects, from replacement parts to original creations, sharing free models with the maker community on Thingiverse.</p>
+    <p>Based in Iowa, I design and print practical, everyday objects, from replacement parts to original creations, sharing free models on Thingiverse and downloadable designs on Cults3D.</p>
     <ul class="tools-list">
       <li>Adventurer 5M</li>
       <li>Kobra</li>
@@ -347,6 +361,33 @@
     <p style="margin-top:1.5rem;">
       <a class="btn" href="https://www.thingiverse.com/JRAltdinc/designs" target="_blank" rel="noopener">View my designs on Thingiverse</a>
     </p>
+
+    <div class="cards">
+      <div class="card">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem;">
+          <h3 style="margin-bottom:0.25rem;">Mini Tongue-and-Groove Pliers Keychain</h3>
+          <span style="font-size:0.85rem; color:var(--cyan); font-weight:600;">$1.00 on Cults3D &middot; Print-in-Place</span>
+        </div>
+        <p>A functional, print-in-place mini &ldquo;Channellock&rdquo;-style tongue-and-groove pliers keychain. Prints flat as a single STL and comes off the bed fully assembled with 3 working jaw positions &mdash; no fasteners, glue, or support material needed (just pop out the small break-away rib under the slot).</p>
+        <img class="app-shot" src="images/3d-printing/pliers-keychain-main.png" alt="Mini Tongue-and-Groove Pliers Keychain 3D model top-down isometric view">
+        <div class="print-thumbs">
+          <img src="images/3d-printing/pliers-keychain-bottom.png" alt="Underside view showing the tongue, lower jaw, and key-ring eye">
+          <img src="images/3d-printing/pliers-keychain-joint.png" alt="Close-up of the sliding pivot slot, stud, and serrated jaw teeth">
+          <img src="images/3d-printing/pliers-keychain-angle.png" alt="Side angle view of the assembled pliers keychain">
+        </div>
+        <ul class="tools-list">
+          <li>Print-in-place (1 STL)</li>
+          <li>3 jaw positions</li>
+          <li>No hardware or supports</li>
+          <li>~10 g PLA / PETG</li>
+          <li>92 &times; 44 mm bed</li>
+          <li>5 mm key-ring eye</li>
+        </ul>
+        <div class="btn-group">
+          <a class="btn" href="https://cults3d.com/:5242157" target="_blank" rel="noopener">Download on Cults3D ($1.00)</a>
+        </div>
+      </div>
+    </div>
 
     <div class="gallery">
       <figure>
