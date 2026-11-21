@@ -1,13 +1,410 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting — JRAltd Inc.</title>
-  <link rel="canonical" href="https://jraltdinc.us/">
-  <meta http-equiv="refresh" content="0; url=https://jraltdinc.us/#contact">
-  <script>window.location.replace("https://jraltdinc.us/#contact");</script>
+  <title>Feedback — JRAltd Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Share feedback, bug reports, or feature requests for JRAltd Inc. apps, add-ins, Windows tools, 3D prints, and website.">
+  <link rel="canonical" href="https://jraltdinc.us/feedback.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --bg-alt: #10151f;
+      --cyan: #2fd8ef;
+      --text: #e6f1f5;
+      --muted: #9db0bb;
+      --border: rgba(47, 216, 239, 0.25);
+      --success-bg: rgba(46, 204, 113, 0.12);
+      --success-border: rgba(46, 204, 113, 0.45);
+      --success-text: #7ef0b0;
+      --error-bg: rgba(231, 76, 60, 0.12);
+      --error-border: rgba(231, 76, 60, 0.45);
+      --error-text: #ff9c94;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: var(--bg-alt);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid rgba(47, 216, 239, 0.3);
+      z-index: 10;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    nav a:hover,
+    nav a.active {
+      color: var(--cyan);
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    h1 {
+      color: var(--cyan);
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0 0 2rem 0;
+    }
+    .card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    .field {
+      margin-bottom: 1.25rem;
+    }
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    label,
+    legend {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.45rem;
+    }
+    fieldset {
+      border: none;
+      margin: 0 0 1.25rem 0;
+      padding: 0;
+    }
+    .req {
+      color: var(--cyan);
+    }
+    .opt {
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 0.85rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.98rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(47, 216, 239, 0.15);
+    }
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+    .rating-group {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      gap: 0.35rem;
+    }
+    .rating-group input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+    .rating-group label {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1;
+      color: rgba(157, 176, 187, 0.35);
+      cursor: pointer;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .rating-group label:hover,
+    .rating-group label:hover ~ label,
+    .rating-group input:checked ~ label {
+      color: var(--cyan);
+    }
+    .rating-group label:hover {
+      transform: scale(1.1);
+    }
+    .rating-group input:focus-visible + label {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    button.btn,
+    a.btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      background: var(--cyan);
+      color: #06131a;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    button.btn:hover,
+    a.btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+    button.btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    a.btn-secondary {
+      background: rgba(47, 216, 239, 0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(47, 216, 239, 0.35);
+    }
+    .status {
+      display: none;
+      margin-top: 1.25rem;
+      padding: 0.9rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .status.success {
+      display: block;
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      color: var(--success-text);
+    }
+    .status.error {
+      display: block;
+      background: var(--error-bg);
+      border: 1px solid var(--error-border);
+      color: var(--error-text);
+    }
+    .alt-links {
+      margin-top: 1.75rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .alt-links a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .alt-links a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-alt);
+      color: var(--muted);
+      border-top: 1px solid rgba(47, 216, 239, 0.2);
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="https://jraltdinc.us/#contact">https://jraltdinc.us/#contact</a>&hellip;</p>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/feedback.html" class="active">Feedback</a>
+  </nav>
+
+  <main>
+    <h1>Feedback</h1>
+    <p class="tagline">Spotted a bug, have a feature idea, or want to share how an app or 3D print worked for you? I read every submission.</p>
+
+    <div class="card">
+      <form id="feedback-form" action="https://formsubmit.co/info@jraltdinc.us" method="POST">
+        <input type="hidden" name="_subject" value="New Website Feedback — JRAltd Inc.">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="project">Project / Product <span class="req">*</span></label>
+            <select id="project" name="project" required>
+              <option value="Website (jraltdinc.us)">Website (jraltdinc.us)</option>
+              <option value="Flip Note (Android)">Flip Note (Android)</option>
+              <option value="Email Sticky Notes (Outlook Add-in)">Email Sticky Notes (Outlook Add-in)</option>
+              <option value="Gmail Weather Companion / Add-on">Gmail Weather Companion / Add-on</option>
+              <option value="JRAltd Inc Program Updater">JRAltd Inc Program Updater</option>
+              <option value="RigTach Metrix">RigTach Metrix</option>
+              <option value="3D Print Designs">3D Print Designs</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="category">Feedback Type <span class="req">*</span></label>
+            <select id="category" name="category" required>
+              <option value="Feature Request">Feature Request</option>
+              <option value="Bug Report">Bug Report</option>
+              <option value="General Feedback">General Feedback</option>
+              <option value="Compliment">Compliment</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Overall Rating <span class="opt">(optional)</span></legend>
+          <div class="rating-group" role="radiogroup" aria-label="Overall rating">
+            <input type="radio" id="star-5" name="rating" value="5 / 5">
+            <label for="star-5" title="5 stars">&#9733;</label>
+            <input type="radio" id="star-4" name="rating" value="4 / 5">
+            <label for="star-4" title="4 stars">&#9733;</label>
+            <input type="radio" id="star-3" name="rating" value="3 / 5">
+            <label for="star-3" title="3 stars">&#9733;</label>
+            <input type="radio" id="star-2" name="rating" value="2 / 5">
+            <label for="star-2" title="2 stars">&#9733;</label>
+            <input type="radio" id="star-1" name="rating" value="1 / 5">
+            <label for="star-1" title="1 star">&#9733;</label>
+          </div>
+        </fieldset>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name <span class="opt">(optional)</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="opt">(optional, if you want a reply)</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="details">Feedback <span class="req">*</span></label>
+          <textarea id="details" name="feedback" required placeholder="Share your thoughts, steps to reproduce a bug, or ideas for improvements..."></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn" id="submit-btn">Send Feedback</button>
+          <a class="btn btn-secondary" href="/">Back to Home</a>
+        </div>
+
+        <div id="form-status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div class="alt-links">
+      <!--email_off--><p>Need direct support or have a general inquiry? Use the <a href="/contact.html">Contact page</a> or email <a href="mailto:info@jraltdinc.us">info@jraltdinc.us</a>.</p><!--/email_off-->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 JRAltd Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('feedback-form');
+      var statusEl = document.getElementById('form-status');
+      var submitBtn = document.getElementById('submit-btn');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        statusEl.className = 'status';
+        statusEl.textContent = '';
+
+        var formData = new FormData(form);
+        var payload = {};
+        formData.forEach(function (value, key) {
+          if (value !== '') {
+            payload[key] = value;
+          }
+        });
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        fetch('https://formsubmit.co/ajax/info@jraltdinc.us', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+          .then(function (res) {
+            return res.json().then(function (data) {
+              return { ok: res.ok, data: data };
+            });
+          })
+          .then(function (result) {
+            if (result.ok && (result.data.success === 'true' || result.data.success === true)) {
+              statusEl.className = 'status success';
+              statusEl.textContent = 'Thanks for the feedback! Your submission has been sent.';
+              form.reset();
+            } else {
+              var msg = (result.data && result.data.message) ? result.data.message : 'Something went wrong while sending your feedback.';
+              statusEl.className = 'status error';
+              statusEl.textContent = msg + ' You can also email info@jraltdinc.us directly.';
+            }
+          })
+          .catch(function () {
+            statusEl.className = 'status error';
+            statusEl.textContent = 'Unable to send right now. Please try again or email info@jraltdinc.us directly.';
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Feedback';
+          });
+      });
+    })();
+  </script>
 </body>
 </html>
